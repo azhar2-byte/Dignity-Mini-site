@@ -192,8 +192,60 @@ body.copy-blocked {overflow:hidden;touch-action:none}
 </div>
 
 <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+</script>
+
+<style>
+#copyWarning {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 2147483647;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+#copyWarning .box {
+  max-width: 520px;
+  margin: 12% auto;
+  background: transparent;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+#copyWarning h1 {
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+#copyWarning p {
+  font-size: 16px;
+  margin: 0 0 6px;
+  opacity: 0.95;
+}
+body.copy-blocked {
+  overflow: hidden;
+  touch-action: none;
+}
+</style>
+
+<div id="copyWarning" aria-hidden="true" role="alert" aria-live="assertive">
+  <div class="box">
+    <h1>Copied from Azhar</h1>
+    <p>This file is not served from the official site (azhar2-byte.github.io/Dignity-Mini-site/).</p>
+    <p>Do not reuse without permission.</p>
+  </div>
+</div>
+
+<script>
 (function(){
-  var allowed = ['azhar2-byte.github.io/Dignity-Mini-site/'];
+  var allowed = ['azhar2-byte.github.io'];
 
   function showPopup(){
     var w = document.getElementById('copyWarning');
@@ -206,7 +258,6 @@ body.copy-blocked {overflow:hidden;touch-action:none}
   }
 
   function blockKey(e){
-  
     var allow = ['F5','Shift','Control','Alt','Meta'];
     if (allow.indexOf(e.key) === -1) {
       e.preventDefault();
@@ -224,7 +275,8 @@ body.copy-blocked {overflow:hidden;touch-action:none}
     var hostAllowed = allowed.indexOf(location.hostname.toLowerCase()) !== -1;
     var refOk = false;
     if (document.referrer) {
-      var a = document.createElement('a'); a.href = document.referrer;
+      var a = document.createElement('a');
+      a.href = document.referrer;
       refOk = allowed.indexOf(a.hostname.toLowerCase()) !== -1;
     }
     if (isFile || (!hostAllowed && !refOk)) showPopup();
@@ -233,6 +285,7 @@ body.copy-blocked {overflow:hidden;touch-action:none}
   }
 })();
 </script>
+
 </body>
 
 </html>
