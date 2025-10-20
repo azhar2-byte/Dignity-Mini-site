@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="logo.jpg" type="image/jpg">
+    <title>Donate - Dignity for Children Foundation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+          <img
+            src="logo.jpg"
+            alt="Dignity for Children Logo"
+            style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 3px solid #fafafa;"
+          />
+          <h2>Dignity for Children Foundation</h2>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link ">About</a></li>
+          <li><a href="programmes.html" class="nav-link">Programmes</a></li>
+          <li><a href="donate.html" class="nav-link active">Donate</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="tasks.html" class="nav-link">Tasks</a></li>
+        </ul>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+            </div>
+        </nav>
+    </header>
+    <section class="page-hero">
+        <div class="container">
+            <h1>Make a Donation</h1>
+            <p>Every contribution helps us provide education and opportunities to children in need</p>
+        </div>
+    </section>
+    <section class="donation-impact">
+        <div class="container">
+            <h2>Your Impact</h2>
+            <p class="section-subtitle">See how your donation directly supports our programs and changes lives</p>
+            
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-amount">Rm25</div>
+                    <h3>School Supplies</h3>
+                    <p>Provides books, notebooks, and writing materials for one child for a full semester</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-amount">Rm50</div>
+                    <h3>Monthly Meals</h3>
+                    <p>Covers nutritious daily meals for one child for an entire month</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-amount">Rm100</div>
+                    <h3>School Uniform & Shoes</h3>
+                    <p>Provides complete school uniform and shoes for one child for the year</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-amount">Rm200</div>
+                    <h3>Technology Access</h3>
+                    <p>Funds computer lab access and digital literacy training for 10 children</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-amount">Rm500</div>
+                    <h3>Teacher Training</h3>
+                    <p>Sponsors professional development training for one teacher</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-amount">Rm1000</div>
+                    <h3>Classroom Setup</h3>
+                    <p>Equips an entire classroom with desks, chairs, and learning materials</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="donation-options">
+        <div class="container">
+            <h2>Ways to Give</h2>
+            <div class="donation-section">
+                <h3>One-Time Donation</h3>
+                <p>Make an immediate impact with a single contribution</p>
+                
+                <div class="donation-amounts">
+                    <div class="amount-buttons">
+                        <button class="amount-btn" onclick="selectAmount(25)">Rm25</button>
+                        <button class="amount-btn" onclick="selectAmount(50)">Rm50</button>
+                        <button class="amount-btn" onclick="selectAmount(100)">Rm100</button>
+                        <button class="amount-btn" onclick="selectAmount(250)">Rm250</button>
+                        <button class="amount-btn" onclick="selectAmount(500)">Rm500</button>
+                        <button class="amount-btn custom-amount" onclick="selectCustomAmount()">Custom</button>
+                    </div>
+                    <div class="custom-input" id="custom-input" style="display: none;">
+                        <input type="number" id="custom-amount" placeholder="Enter amount" min="1">
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary donate-btn" onclick="processDonation('one-time')">Donate Now</button>
+            </div>
+            <div class="donation-section">
+                <h3>Monthly Giving</h3>
+                <p>Join our monthly giving program for sustained impact</p>
+                
+                <div class="monthly-options">
+                    <div class="monthly-plan">
+                        <h4>Education Supporter</h4>
+                        <div class="plan-amount">Rm25/month</div>
+                        <ul>
+                            <li>Supports school supplies for children</li>
+                            <li>Quarterly impact reports</li>
+                            <li>Donor appreciation events</li>
+                        </ul>
+                        <button class="btn btn-outline" onclick="selectMonthlyPlan(25)">Choose Plan</button>
+                    </div>
+                    
+                    <div class="monthly-plan featured">
+                        <div class="plan-badge">Most Popular</div>
+                        <h4>Program Champion</h4>
+                        <div class="plan-amount">Rm50/month</div>
+                        <ul>
+                            <li>Covers meals and supplies for one child</li>
+                            <li>Monthly progress updates</li>
+                            <li>Exclusive donor events</li>
+                            <li>Annual program visit opportunity</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="selectMonthlyPlan(50)">Choose Plan</button>
+                    </div>
+                    
+                    <div class="monthly-plan">
+                        <h4>Community Builder</h4>
+                        <div class="plan-amount">Rm100/month</div>
+                        <ul>
+                            <li>Supports multiple children's education</li>
+                            <li>Bi-weekly impact stories</li>
+                            <li>Direct communication with program staff</li>
+                            <li>Annual recognition dinner</li>
+                        </ul>
+                        <button class="btn btn-outline" onclick="selectMonthlyPlan(100)">Choose Plan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="other-ways">
+        <div class="container">
+            <h2>Other Ways to Support Us</h2>
+            
+            <div class="ways-grid">
+                <div class="way-item">
+                    <h3>Corporate Partnership</h3>
+                    <p>Partner with us through corporate sponsorships, employee giving programs, or skills-based volunteering.</p>
+                    <a href="contact.html" class="link">Learn More </a>
+                </div>
+                
+                <div class="way-item">
+                    <h3>In-Kind Donations</h3>
+                    <p>Donate books, school supplies, computers, or other educational materials that directly benefit our programs.</p>
+                    <a href="contact.html" class="link">Donate Items </a>
+                </div>
+                
+                <div class="way-item">
+                    <h3>Fundraising Events</h3>
+                    <p>Organize a fundraising event in your community, school, or workplace to support our mission.</p>
+                    <a href="contact.html" class="link">Get Started </a>
+                </div>
+                
+                <div class="way-item">
+                    <h3>Legacy Giving</h3>
+                    <p>IncludeDignity for Children Foundation in your will or estate planning to create a lasting impact for future generations.</p>
+                    <a href="contact.html" class="link">Learn More </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="transparency">
+        <div class="container">
+            <h2>Financial Transparency</h2>
+            <p>We believe in complete transparency about how your donations are used.</p>
+            
+            <div class="transparency-content">
+                <div class="fund-allocation">
+                    <h3>How Your Donation is Used</h3>
+                    <div class="allocation-chart">
+                        <div class="allocation-item">
+                            <div class="allocation-bar">
+                                <div class="bar-fill" style="width: 85%"></div>
+                            </div>
+                            <div class="allocation-info">
+                                <span class="percentage">85%</span>
+                                <span class="category">Programs & Services</span>
+                            </div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-bar">
+                                <div class="bar-fill" style="width: 10%"></div>
+                            </div>
+                            <div class="allocation-info">
+                                <span class="percentage">10%</span>
+                                <span class="category">Administrative Costs</span>
+                            </div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-bar">
+                                <div class="bar-fill" style="width: 5%"></div>
+                            </div>
+                            <div class="allocation-info">
+                                <span class="percentage">5%</span>
+                                <span class="category">Fundraising</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="financial-info">
+                    <h3>Financial Reports</h3>
+                    <p>We publish annual financial reports and undergo independent audits to ensure accountability.</p>
+                    <ul>
+                        <li>Annual Financial Report 2023</li>
+                        <li>Independent Audit Report 2023</li>
+                        <li>Program Impact Assessment 2023</li>
+                    </ul>
+                    <a href="contact.html" class="link">Request Reports </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="donor-recognition">
+        <div class="container">
+            <h2>Thank You to Our Donors</h2>
+            <p>We are grateful to all our supporters who make our work possible.</p>
+            
+            <div class="recognition-levels">
+                <div class="recognition-level">
+                    <h3> Partners (Rm10,000+)</h3>
+                    <p>Community Foundation, Local Business Alliance, Anonymous Donor</p>
+                </div>
+                <div class="recognition-level">
+                    <h3>Supporters (Rm5,000+)</h3>
+                    <p>Smith Family Foundation, Johnson & Associates, Green Valley Church</p>
+                </div>
+                <div class="recognition-level">
+                    <h3> Donors (Rm1,000+)</h3>
+                    <p>Over 50 individual and family donors</p>
+                </div>
+                <div class="recognition-level">
+                    <h3>Friends (Rm500+)</h3>
+                    <p>Over 200 community supporters</p>
+                </div>
+            </div>
+            
+            <p class="recognition-note">*Recognition levels based on annual giving. Donors may choose to remain anonymous.</p>
+        </div>
+    </section>
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Make a Difference?</h2>
+                <p>Your donation, no matter the size, creates real change in children's lives.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="processDonation('quick')">Donate Now</button>
+                    <a href="contact.html" class="btn btn-secondary">Have Questions?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dignity for Children Foundation</h3>
+                    <p>Empowering children through education and breaking the cycle of poverty in our community.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                       <li><a href="about.html">About Us</a></li>
+                        <li><a href="programmes.html">Programmes</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="tasks.html">Tasks</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email:<a href="dignity@dignityforchildren.org">dignity@dignityforchildren.org </a></a></p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Address: 123 Hope Street, Community City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dignity for Children Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./script.js"></script>
+</body>
+
+</html>
