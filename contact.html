@@ -1,0 +1,246 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+ 
+  <link rel="icon" href="logo.jpg" type="image/jpg">
+  <title>Contact Us - Dignity for Children Foundation</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-container">
+         <div class="nav-logo">
+          <img
+            src="logo.jpg"
+            alt="Dignity for Children Logo"
+            style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 3px solid #fafafa;"
+          />
+          <h2>Dignity for Children Foundation</h2>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link ">About</a></li>
+          <li><a href="programmes.html" class="nav-link">Programmes</a></li>
+          <li><a href="donate.html" class="nav-link">Donate</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="tasks.html" class="nav-link">Tasks</a></li>
+        </ul>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We do love to hear from you whether you want to learn more, volunteer, or support our mission.</p>
+    </div>
+  </section>
+  <section class="contact-info">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-details">
+          <h2>Get in Touch</h2>
+          <p>
+            Have questions about our programmes, donations, or partnerships Reach out to us  we're happy to help.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <h3>Email</h3>
+              <p><a href="mailto:info@dignityforchildren.org">info@dignityforchildren.org</a></p>
+              <p>For general inquiries and information.</p>
+            </div>
+
+            <div class="contact-method">
+              <h3>Phone</h3>
+              <p>+603 4044 1397</p>
+              <p>Monday - Friday, 9:00 AM - 5:00 PM</p>
+            </div>
+
+            <div class="contact-method">
+              <h3>Address</h3>
+              <p>
+                Dignity for Children Foundation<br>
+                45 Jalan 15/48A, Sentul Raya Boulevard<br>
+                Off Jalan Sentul, 51000 Kuala Lumpur, Malaysia
+              </p>
+              <p>Visit us during office hours.</p>
+            </div>
+          </div>
+
+          <div class="office-hours">
+            <h3>Office Hours</h3>
+            <ul>
+              <li>Monday - Friday: 9:00 AM - 5:00 PM</li>
+              <li>Saturday: 10:00 AM - 2:00 PM</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact-form-section">
+          <h2>Send Us a Message</h2>
+          <form class="contact-form" id="contact-form" onsubmit="submitForm(event)">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="general">General Information</option>
+                <option value="sponsorship">Child Sponsorship</option>
+                <option value="donation">Donations</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="partnership">Partnership Opportunities</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Please tell us how we can help you..."></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="newsletter" name="newsletter">
+              <label for="newsletter">I would like to receive updates about Dignity for Children Foundation's programs and impact.</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="quick-actions">
+    <div class="container">
+      <h2>Quick Actions</h2>
+      <div class="actions-grid">
+        <div class="action-card">
+          <h3>Sponsor a Child</h3>
+          <p>Make a lasting impact by sponsoring a child's education and wellbeing.</p>
+          <a href="sponsor.html" class="btn btn-outline">Start Sponsoring</a>
+        </div>
+
+        <div class="action-card">
+          <h3>Make a Donation</h3>
+          <p>Support our programs with a one-time or monthly contribution.</p>
+          <a href="donate.html" class="btn btn-outline">Donate Now</a>
+        </div>
+
+        <div class="action-card">
+          <h3>Volunteer</h3>
+          <p>Share your time and skills to help empower children through education.</p>
+          <a href="mailto:info@dignityforchildren.org" class="btn btn-outline">Get Involved</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3>How do I know my donation is used effectively?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>We publish regular reports and updates. Over 85% of all donations go directly to programmes. Independent audits ensure transparency and accountability.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3>Can I visit the foundation and meet the children?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We welcome visitors and supporters. Please contact us beforehand to schedule a guided tour.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3>What volunteer opportunities are available?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>We offer tutoring, mentoring, administration, and skills-based volunteering. Reach out to see how you can help.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3>Are donations tax-deductible in Malaysia?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, Dignity for Children Foundation is a registered NGO in Malaysia, and eligible donations are tax-deductible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="map-section">
+    <div class="container">
+      <h2>Find Us</h2>
+      <div class="placeholder-map">
+        <p> 45 Jalan 15/48A, Sentul Raya Boulevard, Off Jalan Sentul, 51000 Kuala Lumpur, Malaysia</p>
+        <p><a href="https://maps.google.com/?q=Dignity+for+Children+Foundation+Kuala+Lumpur" target="_blank"> Open in Google Maps</a></p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Dignity for Children Foundation</h3>
+          <p>Empowering children through education and breaking the cycle of poverty in Malaysia.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programmes.html">Programmes</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>Email: <a href="mailto:info@dignityforchildren.org">info@dignityforchildren.org</a></p>
+          <p>Phone: +603 4044 1397</p>
+          <p>Address: 45 Jalan 15/48A, Sentul Raya Boulevard, 51000 Kuala Lumpur</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dignity for Children Foundation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
