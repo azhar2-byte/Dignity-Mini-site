@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="style3.css">
+  <style>
+   
+    #backButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s, transform 0.2s;
+      z-index: 1000;
+    }
+
+    #backButton:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="Home.html">Home</a>
+    <a href="see.html">See</a>
+    <a href="schedule.html">Schedule</a>
+  </nav>
+
+  <section class="intro">
+    <div class="container">
+      <h1>Welcome to My Website!</h1>
+      <p>This is not my best work I have built better ones before.</p>
+      <p class="lazy-line">I just didnt feel like trying too hard this time </p>
+    </div>
+  </section>
+
+
+  <button id="backButton" onclick="location.href='index.html'">Back to Index</button>
+
+</body>
+</html>
