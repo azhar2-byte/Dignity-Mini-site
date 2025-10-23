@@ -313,8 +313,8 @@ function addErrorStyles() {
 document.addEventListener('DOMContentLoaded', addErrorStyles);
 
 console.log(`
-🌟 Dignity For Children Foundation Website
-📧 Contact: dignity@dignityforchildren.org
-🌐 Built with HTML5, CSS3, and Vanilla JavaScript
-💛 Theme: Bright Yellow (#ffc400) on White
+ Dignity For Children Foundation Website
+ Contact: dignity@dignityforchildren.org
+ Built with HTML5, CSS3, and Vanilla JavaScript
+ Theme: Bright Yellow (#ffc400) on White
 `);
