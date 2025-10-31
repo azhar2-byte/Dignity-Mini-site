@@ -1,0 +1,74 @@
+body {
+  font-family: "Poppins", Georgia, serif;
+  background: linear-gradient(135deg, #fff8dc, #ffffff);
+  margin: 0;
+  padding: 40px 20px;
+  color: #222;
+}
+
+h1 {
+  color: #e0a800;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+img {
+  display: block;
+  margin: 0 auto 25px auto;
+  border-radius: 15px;
+  border: 4px solid #ffc400;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+h2, h3 {
+  color: #ffb300;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+ul, ol {
+  background: #fff9d6;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 10px auto 25px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
+  text-align: left;
+}
+
+ul li, ol li {
+  margin: 6px 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #fffef3;
+  transition: all 0.3s ease;
+}
+
+ul li:hover, ol li:hover {
+  background: #ffe680;
+  transform: translateX(5px);
+}
+
+ol {
+  counter-reset: item;
+}
+
+ol li {
+  counter-increment: item;
+}
+
+ol li::before {
+  content: counter(item) ". ";
+  color: #e0a800;
+  font-weight: bold;
+}
