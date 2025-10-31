@@ -92,3 +92,38 @@ a:hover {
   color: #fff;
   transform: translateY(-2px);
 }
+nav {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222222;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ffc400;
+  color: #222222;
+  box-shadow: 0 4px 10px rgba(255,196,0,0.3);
+  transform: translateY(-2px);
+}
+
+nav a.active {
+  background-color: #ffc400;
+  color: #222222;
+}
